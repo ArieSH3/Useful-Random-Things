@@ -1,2 +1,2 @@
 # Useful-Random-Things
-A culmination of random useful things and software I stumble upon over time saved here for all 
+An aggregate of random useful items and software I've encountered over time, gathered here for the benefit of all.
