@@ -1,0 +1,50 @@
+## How to Change Folder Icons via Windows Registry
+
+### Preparations:
+
+#### 1. Create a System Restore Point:
+   - **Open System Properties**: Right-click on "This PC" or "My Computer" and select "Properties". Then, click on "System protection" on the left pane.
+   - **Create Restore Point**: Click on the "System Protection" tab, then click "Create". Give the restore point a name like "Before Registry Edit" and click "Create".
+   - **Confirmation**: Once the restore point is created, click "Close" and then "OK".
+
+#### 2. Backup the Registry:
+   - **Open Registry Editor**: Press `Win + R`, type `regedit`, and hit Enter.
+   - **Backup**: In the Registry Editor, click on "File" > "Export". Choose a location to save the backup, ensure "All" is selected under Export range, and save it.
+
+### Changing Folder Icons:
+
+#### 1. Locate or Create the 'Shell Icons' Key:
+   - Navigate to `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer`.
+   - Right-click on `Explorer`, select `New` > `Key`, and name it `Shell Icons` (if it doesn’t already exist).
+
+#### 2. Set Custom Icons:
+   - **For Closed Folders (String Value '2')**:
+     - Right-click in `Shell Icons`, select `New` > `String Value`, name it `2`.
+     - Double-click on it and enter the path to your custom icon file in `.ico` format.
+   - **For Open Folders (String Value '3')**:
+     - Create another `New` > `String Value`, name it `3`.
+     - Double-click and set the path to your custom icon file for open folders.
+
+#### 3. Apply the Changes:
+   - **Restart your PC** or **refresh the icon cache**.
+
+### Reverting Changes (if needed):
+
+#### 1. Using Registry Backup:
+   - Open Registry Editor, click on "File" > "Import".
+   - Navigate to your backup file and select it.
+   - Restart your PC after the import is done.
+
+#### 2. Using System Restore Point:
+   - **Access System Restore**: Type "Create a restore point" in the Windows search bar and open it.
+   - **System Restore**: Select "System Restore" and choose the restore point you created before making changes.
+   - Follow the prompts to revert your system to the selected restore point.
+
+---
+
+### Additional Notes:
+- Ensure your custom icons are high-quality and in `.ico` format.
+- Be precise in editing the Registry and only modify the intended values.
+- These steps are for informational purposes. Proceed with caution and at your own risk.
+
+This guide provides a detailed process for customizing folder icons through the Registry, along with safety measures to prevent and recover from potential issues.
