@@ -1,0 +1,5 @@
+Windows 10 trial unlock:
+
+1. Open windows power shell
+2. Write: irm https://massgrave.dev/get | iex
+3. Choose the unlimited version
